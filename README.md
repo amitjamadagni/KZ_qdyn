@@ -16,7 +16,9 @@ General structure for
 
 Each of the above repo has the following structure:
 `gen` -> DMRG code (might also include the dynamics)
+
 `mps` -> MPS sampling (might also include the dynamics)
+
 `data_mps` -> sample run for a given system size of N=500 on a HPC node (can be extended to other system sizes as well)
 
 
