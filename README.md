@@ -15,6 +15,7 @@ General structure for
 4. `issh_qc` -> Extended SSH model dynamics on a quantum computer
 
 Each of the above repo has the following structure:
+
 `gen` -> DMRG code (might also include the dynamics)
 
 `mps` -> MPS sampling (might also include the dynamics)
