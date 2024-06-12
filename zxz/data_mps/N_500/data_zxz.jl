@@ -1,8 +1,8 @@
 empty!(DEPOT_PATH)
-push!(DEPOT_PATH, "/dss/dsshome1/07/di93hog/jlib_1pt6")
+push!(DEPOT_PATH, "jlib_1pt6")
 
-include("/dss/dsshome1/07/di93hog/quench_dyn/zxz/gen/zxz_mps_gen_exp.jl")
-include("/dss/dsshome1/07/di93hog/quench_dyn/zxz/mps/zxz_e_mps.jl")
+include("zxz_mps_gen_exp.jl")
+include("zxz_e_mps.jl")
 
 tq_arr = [2^i for i=collect(2:14)]
 

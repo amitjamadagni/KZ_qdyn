@@ -1,7 +1,7 @@
 empty!(DEPOT_PATH)
-push!(DEPOT_PATH, "/dss/dsshome1/07/di93hog/jlib_1pt6")
+push!(DEPOT_PATH, "jlib_1pt6")
 
-include("/dss/dsshome1/07/di93hog/quench_dyn/issh_qc_new/gen/issh_mps_gen_ebasis.jl")
+include("issh_mps_gen_ebasis.jl")
 
 tq_arr = [2^i for i=collect(2:14)]
 
@@ -18,7 +18,7 @@ for param in [parse(Int, ENV["SLURM_ARRAY_TASK_ID"])]
     _tq = tq_arr[param]
     println(_tq)
 
-    f = h5open("/dss/dsshome1/07/di93hog/quench_dyn/issh_qc_new/data_mps/N_500/wf_data"*"/wf_tq_"*"$(_tq)"*".h5","r")
+    f = h5open("quench_dyn/issh_qc_new/data_mps/N_500/wf_data"*"/wf_tq_"*"$(_tq)"*".h5","r")
     final_psi = read(f, "psi", MPS)
     close(f)
 
